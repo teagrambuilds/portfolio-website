@@ -1,0 +1,125 @@
+/* Layout */
+.page {
+  min-height: 100vh;
+  background: #f5f1ec;              /* soft cream */
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.page-inner {
+  max-width: 800px;
+}
+
+/* Hero */
+
+.hero-subsection {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overline {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-picture {
+  position: relative;
+  z-index: 2;
+  margin-right: -40px;     /* 👈 creates the overlap */
+}
+
+.hero-picture img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  object-position: top center;
+  position: relative;
+  z-index: 2;
+  display: block;          
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.hero-subtitle {
+  max-width: 550px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* Hero links */
+.hero-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.btn-primary,
+.btn-ghost {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #122338;
+  color: #fff;
+}
+
+.btn-ghost {
+  border: 1px solid #122338;
+  color: #122338;
+  background: transparent;
+}
+
+/* Section + projects */
+.section-title {
+  font-size: 1.5rem;
+  margin: 0 0 6px;
+}
+
+.section-subtitle {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-chip {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  text-decoration: none;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+.project-chip-name {
+  font-weight: 500;
+}
+
+.project-chip-status {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
