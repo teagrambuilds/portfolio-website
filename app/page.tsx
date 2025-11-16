@@ -1,61 +1,73 @@
-// app/page.tsx or app/page.js
-
 const projects = [
   {
-    name: "Virtual Try-On Extension",
+    name: "Virtual Try-On Chrome Extension",
     status: "In progress",
-    description: "A Chrome extension that lets you virtually try on clothes while you shop online.",
-    link: "https://github.com/teagrambuilds/virtual-try-on-extention",
+    link: "https://github.com/teagrambuilds", // change to exact repo
   },
   {
-    name: "90-Day GitHub Challenge",
+    name: "90-Day GitHub Portfolio Challenge",
     status: "Public log",
-    description: "Documenting my journey of building a real developer portfolio in 90 days.",
-    link: "https://github.com/teagrambuilds", // or a specific repo
+    link: "https://github.com/teagrambuilds", // or a dedicated repo
+  },
+  {
+    name: "Content & Systems for Early-Career Devs",
+    status: "Ideas & notes",
+    link: "https://github.com/teagrambuilds", // placeholder
   },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f5f7fb] flex justify-center px-4 py-12">
-      <div className="w-full max-w-3xl">
-        {/* Hero */}
-        <header className="mb-10">
-          <p className="text-sm text-gray-500 mb-2">Hey, I’m Tea 👋</p>
-          <h1 className="text-4xl font-semibold mb-3">
+    <main className="page">
+      <div className="page-inner">
+        <header className="hero">
+          <p className="hero-overline">Hey, I&apos;m Tea 👋</p>
+          <h1 className="hero-title">
             Software engineer building soft, clean tech for women.
           </h1>
-          <p className="text-gray-600 mb-5">
-            I’m documenting my journey: learning backend, shipping real projects,
-            and building tools I’d actually use myself.
+          <p className="hero-subtitle">
+            Right now I&apos;m learning backend, building a virtual try-on tool,
+            and documenting the messy in-between of growing as a developer.
           </p>
-          <a
-            href="https://github.com/teagrambuilds"
-            target="_blank"
-            className="inline-block rounded-full border px-5 py-2 text-sm font-medium bg-black text-white hover:opacity-90"
-          >
-            View my GitHub
-          </a>
+
+          <div className="hero-links">
+            <a
+              href="https://github.com/teagrambuilds"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary"
+            >
+              View my GitHub
+            </a>
+            <a
+              href="https://www.instagram.com/____" // your IG / link in bio
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost"
+            >
+              Follow my build-in-public
+            </a>
+          </div>
         </header>
 
-        {/* Projects */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-          <div className="space-y-4">
+        <section className="section">
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">
+            Small experiments that are helping me grow my skills and ship
+            things I&apos;d actually use.
+          </p>
+
+          <div className="project-list">
             {projects.map((project) => (
               <a
                 key={project.name}
                 href={project.link}
                 target="_blank"
-                className="block rounded-xl bg-white shadow-sm border px-5 py-4 hover:-translate-y-[2px] transition"
+                rel="noreferrer"
+                className="project-chip"
               >
-                <div className="flex items-center justify-between mb-1">
-                  <h3 className="font-medium">{project.name}</h3>
-                  <span className="text-xs rounded-full bg-emerald-100 text-emerald-700 px-2 py-0.5">
-                    {project.status}
-                  </span>
-                </div>
-                <p className="text-sm text-gray-600">{project.description}</p>
+                <span className="project-chip-name">{project.name}</span>
+                <span className="project-chip-status">{project.status}</span>
               </a>
             ))}
           </div>
